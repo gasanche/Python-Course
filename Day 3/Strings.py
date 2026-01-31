@@ -15,7 +15,7 @@ print('\n-------- Indexing --------')
 print(new_string[0]) #This is 'H'
 print(new_string[-1]) #This is '!'
 
-print('-------- Slicing --------')
+print('\n-------- Slicing --------')
 # String slicing allows us to extract a substring from a string using the syntax [start:end]
 new_substring = new_string[0:5] 
 # This will get characters from index 0 to 4. The slicing is exclusive of the end index, so 5 is not included.
@@ -46,3 +46,26 @@ print(f"Cleaned string data: '{clean_string}'")
 # Now we're doing the same in one line
 chained_clean_string = raw_string.strip().replace("$", "").lower()
 print(f"Chained cleaned string data: '{chained_clean_string}'")
+
+
+print('\n-------- f-Strings and Immutability --------')
+# Somethin that you might have noticed is the f-strings that we have been using to print
+# f-strings (formatted string literals) are a way to embed expressions inside string literals, using curly braces {}
+my_name = "Camila"
+print(f"Hello, {my_name}! Welcome to this Python Course.")
+
+# You can even do calculations inside the curly braces! That's crazy!
+a = 5
+b = 10
+print(f"The sum of {a} and {b} is {a + b}.")
+
+
+# Okay, something important about strings in Python is that they are immutable
+# This means that once a string is created, it cannot be changed.
+
+my_name = "Camila"
+# Trying to change the first character will result in an error
+# my_name[0] = "c"  # This will raise a TypeError. Delete the '#' to see the error
+
+
+
